@@ -9,8 +9,6 @@
 
 EBTNodeResult::Type UChooseNextWaypoint::ExecuteTask(UBehaviorTreeComponent& OwnerComp, uint8* NodeMemory)
 {
-	
-
 	// Get the patrol route
 	auto ControlledPawn = OwnerComp.GetAIOwner()->GetPawn();
 	auto PatrolRoute = ControlledPawn->FindComponentByClass<UPatrolRoute>();
