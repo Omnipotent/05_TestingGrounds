@@ -33,10 +33,18 @@ public:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category=Camera)
 	float BaseLookUpRate;
 
-protected:
+	/** Gun muzzle's offset from the characters location */
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Gameplay)
+	FVector GunOffset;
 
-	/** Resets HMD orientation and position in VR. */
-	void OnResetVR();
+	UPROPERTY(EditDefaultsOnly, Category = "Setup")
+	TSubclassOf<class AGun>GunBlueprint;
+
+private:
+
+	AGun* Gun;
+
+protected:
 
 	/** Handles moving forward/backward */
 	void MoveForward(float Val);
