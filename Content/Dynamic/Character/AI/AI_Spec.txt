@@ -2,8 +2,8 @@ GuardBehavior
 NPC_AI_BP
 
 
-If you can see the enemy, and in range, shoot at the enemy.
-If you see the enemy move within range of the enemy.
+If you can see the enemy and within 260m, shoot at the enemy.
+If you see the enemy and not within 260m, move within 260m of the enemy while shooting at the enemy.
 If you can't see the enemy, but haven't visited last known location, visit that location.
 Else go to the next patrol point.
 
