@@ -38,9 +38,9 @@ void ATile::PositionNavMeshBoundsVolume()
 	GetWorld()->GetNavigationSystem()->Build();
 }
 
-void ATile::PlaceActors(TSubclassOf<AActor> ToSpawn, int MinSpawn, int MaxSpawn, float Radius, float MinScale, float MaxScale)
+void ATile::PlaceActors(TSubclassOf<AActor> ToSpawn, FActorSpawnInfoStruct SpawnInfo)
 {
-	TArray<FSpawnPosition> SpawnPositions = RandomSpawnPositions(MinSpawn, MaxSpawn, Radius, MinScale, MaxScale);
+	TArray<FSpawnPosition> SpawnPositions = RandomSpawnPositions(SpawnInfo.MinSpawn, SpawnInfo.MaxSpawn, SpawnInfo.Radius, SpawnInfo.MinScale, SpawnInfo.MaxScale);
 	for (FSpawnPosition SpawnPosition : SpawnPositions)
 	{
 		PlaceActor(ToSpawn, SpawnPosition);
