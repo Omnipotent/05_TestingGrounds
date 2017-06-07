@@ -1,0 +1,9 @@
+Need to lower light intensity
+Enemies still shoot you when you are dead
+
+AI should react to being shot by turning towards that direction and attempting to find/shoot the player
+
+Player can fall out of the map by walking backwards at the spawn instead of going forwards
+BUG: Player can get out of the map and/or go backwards, potentially spawning more blocks than should be spawned. (Because of the large rocks that spawn taller than the walls. Players can just climb them if they spawn in a certain position)
+
+
